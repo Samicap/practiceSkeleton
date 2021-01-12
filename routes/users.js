@@ -9,25 +9,12 @@ const express = require('express');
 const router  = express.Router();
 const userDB = require('../db/helpers/user_helper');
 
-// const { Pool } = require('pg');  // DOnt need bacuse ser.erjs its called in
-
-
-// const pool = new Pool({
-//   user: 'vagrant',
-//   password: '123',
-//   host: 'localhost',
-//   database: 'practice'
-// });
-
-// pool.connect()
-// .then (console.log("connected"))
-// .catch (error => console.log("error", error));
 
 
 module.exports = (db) => {
   const userDbHelpers = userDB(db);
 
-  router.get("/", (req, res) => {
+  router.get("/", (req, res) => { // talking to what we cant see
     // db.query(`SELECT * FROM users;`)
     //   .then(data => {
     //     const users = data.rows;

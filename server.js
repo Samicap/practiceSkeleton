@@ -73,7 +73,7 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { //talking to the front end user what we can see
   // userDbHelpers.getAllUsers().then(data => {
   //   const users = data.rows;
   //   const templateVars = { "widgets": [], "users": users };
@@ -82,7 +82,11 @@ app.get("/", (req, res) => {
   //     res.render("index", templateVars); // ejs is psychic and knows to look in views folder for ejs files
   // })
   // const templateVars = {"users": tempUsers, "widgets": widgets};
-  userDbHelpers.getAllUsers().then(data => {
+
+  //console.log(usersRoutes(db)) ========>>>>>>> function router(res,res,next){router.handle(req, res, next);}
+
+
+  userDbHelpers.getAllUsers().then(data => { // userDbHelpers is an object  with a getAllUsers() method
     const users = data.rows;
     console.log(users)
     const templateVars = {"users": users};
