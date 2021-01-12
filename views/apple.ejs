@@ -13,25 +13,22 @@
 
   <body>
     <h1>Hello World!</h1>
-    <h2><%= users.length %></h2>
-    <div class=users>
-      <form method="POST" action="/api/users">
 
-        <input type="submit">Submit</input>
       </form>
-      <% for (let i in widgets) { %>
-        <p>
-          <h3><%= i %></h3>
-          <%= widgets[i].name %>
-        </p>
-     <% } %>
-    </div>
-    <div>
-      <% for (let i in users) { %>
-        <h3><%= i %></h3>
-        <%= users[i].name %>
-      <% } %>
-    </div>
+      <div class=users>
+        <p> PINK</p>
+
+      </div>
+      <div>
+        <% for (let i in users) { %>
+          <%= i %>
+          <div>
+
+            <%= users[i].name %>
+          </div>
+       <% } %>
+      </div>
+
 
   </body>
 </html>
